@@ -1,0 +1,12 @@
+ls -ld */| awk '{print $9}'
+or
+ls -ld */| awk '{print $NF}'
+for i in adservice cartservice checkoutservice currencyservice emailservice frontend paymentservice productcatalogservice recommendationservice shippingservice
+do
+cd $i
+touch Chart.yaml values.yaml
+mkdir templates
+cd ..
+done
+
+
