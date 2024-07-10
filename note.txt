@@ -1,3 +1,6 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04 to install nodejs in ubuntu many versions available
+
+
 ls -ld */| awk '{print $9}'
 or
 ls -ld */| awk '{print $NF}'
@@ -8,5 +11,35 @@ touch Chart.yaml values.yaml
 mkdir templates
 cd ..
 done
+
+###################
+git add . ; git commit -m "hipstershop-helm" ; git push origin main
+
+for i in adservice cartservice checkoutservice currencyservice emailservice frontend paymentservice productcatalogservice recommendationservice shippingservice
+do
+cd $i
+helm upgrade --install $i .
+cd ..
+done
+
+
+mycluster.us-east-1.eksctl.io 
+mycluster01.us-east-1.eksctl.io 
+
+aws eks cluster --name mycluster --region us-east-1
+
+kubectl config get-context
+kubectl config use-context mycluster.us-east-1.eksctl.io 
+kubectl config current-context mycluster.us-east-1.eksctl.io
+
+aws eks update-kubeconfig --region us-east-1 --name mycluster
+
+bEVTQWsyV0tUenMwYjVEYQ==
+
+echo bEVTQWsyV0tUenMwYjVEYQ== | base64 --decode
+lESAk2WKTzs0b5Da
+
+argocd cluster set CLUSTER_NAME --name mycluster --namespace '*'
+
 
 
